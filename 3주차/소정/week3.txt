@@ -1,0 +1,72 @@
+1. 함수 선언식 vs 함수 표현식 vs 화살표 함수
+    함수 선언식
+        function hello () {
+
+        }
+    함수 표현식
+        let hello = function () {
+            #함수 이름 지정할 필요 없음
+        }
+        console.log(hello) #함수식 그 자체 출력
+        console.log(helloText = hello()) #return 값 출력
+
+    화살표 함수
+        let hello = () => {
+            #function 쓸 필요 없음
+        }
+    
+    호이스팅이란?
+        함수 선언 위치와 관계없이 사용 가능
+        함수 선언식은 호이스팅 적용
+        함수 표현식, 화살표 함수는 호이스팅 적용x (순서 중요)
+
+2. call back
+    함수에 함수를 매개변수로 넘겨주는 것
+    function add(functionA, functionB)
+
+3. DOM이란?
+    BOM(Browser Object Model) 중 하나로 Doctument Object Model
+    쉽게 말해 html의 기능을 js에서 이용 가능한 객체로 만들어 놓은 것
+    ex. var header = document.createElement('h2');
+        var textNode = document.createTextNode('Hello');
+        header.appendChild(textNode);       #h2 테그에 Hello 추가
+        document.body.appendChild(header);  #body에 h2 추가
+    노드 수가 많아질수록 복잡해져 사용이 어려워지고 비용적 문제가 발생
+
+    virtual DOM (React)
+        가상 돔에서 변경 사항 미리 반영한 후 실제 DOM에 업데이트 - 렌더링 줄임
+        DOM은 요소가 바뀔 때마다 렌더링한다
+
+        <li>를 변경하는데 DOM에 접근하여 <li>태그를 10번 을 바꾸지 않고 
+        Virtual DOM을 통해 <li>태그10개를 변경하고 Virtual DOM과 실제 DOM을 비교하여 
+        변경된 부분을 1번만에 변경하여 렌더링도 1번만 일어나게 하는 것
+
+
+4. 이벤트
+    폼 이벤트
+        제출, 초기화
+    마우스 이벤트
+        클릭, 더블클릭, 마우스 이동
+    키보드 이벤트
+        keydown, keypress, keyup
+    
+    addEventListener(이벤트, 적용될 함수, 옵션)
+
+    const btn = document.querySelector('#btn2');
+    btn.onclick = function() { alert('Hi') };
+
+    btn.addEventListener('click', function() {
+        alert('hi');
+    })
+
+    둘 다 동일한 결과를 가져오지만 addEventListener가 event 여러 개 등록가능
+
+4. 동기 vs 비동기
+    동기식 처리 방식: 코드 작성된 순서대로 작업을 처리 > 수행 시간이 느려진다
+
+    비동기식 처리 방식: js는 single thread를 사용하는데, 이 단점을 극복하기 위한 방식. 앞 코드의 결과를 기다리지 않고 다음 코드 바로 실행
+    각 task 뒤에 작업이 끝났음을 알려주는 call back 함수 필요
+
+    Web APIs에 실행 중인 함수 저장 후 call stack에서 나머지 함수 실행
+    Web APIs의 결과를 Callback Queue에 옮긴 후 CallStack에서 수행 중인 함수가 없을 때 CallStack으로 옮겨주어 실행을 마무리한다
+
