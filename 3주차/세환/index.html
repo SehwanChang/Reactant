@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>오늘의 todo list 📌</header>
+    <div class="date">
+      <script type="text/javascript">
+        let today = new Date();
+
+        let year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let date = today.getDate();
+        let day = today.getDay();
+
+        document.write("📆 " + month + "월 " + date + "일 ");
+        document.write(" ");
+        var a = Array(
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        );
+        document.write(a[day]);
+      </script>
+    </div>
+    <form class="todo_generator">
+      <input type="text" id="todo__input" placeholder="📝 할 일을 입력하세요" />
+    </form>
+    <ul id="todo_lists"></ul>
+    <footer>오늘 하루도 화이팅!</footer>
+  </body>
+  <script src="todo1.js"></script>
+</html>
