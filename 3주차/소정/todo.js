@@ -26,7 +26,7 @@ const paintTodo = (value) => {
   reviseBtn.src = "./image/revision.png";
   reviseBtn.className = "revise_todo";
   li.appendChild(reviseBtn);
-
+//<li><img class=revise_todo/></li>
   li.id = `todo_${todos.length + 1}`;
   const todoObject = {
     value,
@@ -124,7 +124,7 @@ const reviseTodo = (target) => {
     form.appendChild(input)
 
     target.replaceChild(form, target.children[0]) 
-
+    //내부 값 수정
     const reviseEnd = (event, target) => {
         event.preventDefault();
 
@@ -137,7 +137,7 @@ const reviseTodo = (target) => {
 
         todos.forEach((el) => {
             if (el.id === target.id) {
-                el.text=revisedText
+                el.text=revisedText //todos를 검사하며 바꿀 elemet 탐색
             }
         })
         target.replaceChild(text, target.children[0]);

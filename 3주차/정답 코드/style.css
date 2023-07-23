@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Dovemayo_gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body,
+html {
+  width: 100%;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: 'NanumSquareNeo-Variable';
+  
+  
+}
+header{
+  height: 50px;
+  width: 200px;
+  
+  border-radius: 10px;
+  background-color: rgb(254, 247, 184);
+  text-align: center;
+  line-height: 50px;
+  margin: 40px auto 30px auto;
+ 
+}
+
+.todo_container {
+  padding: 30px;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#todo_lifeQuote {
+  font-size: 32px;
+}
+
+.todo_generator {
+  
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid rgb(255, 221, 159);
+  
+}
+.date{
+  margin: 0 200px;
+  text-align: right;
+  
+}
+#todo_listTitle {
+  margin-top: 50px;
+  font-size: 26px;
+}
+
+#todo_lists {
+  margin-top: 30px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  align-items: center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  margin: 30px auto;
+  border-radius:10px;
+
+}
+
+#todo_lists li {
+  border: 2px solid rgb(255, 153, 0);
+  background-color: white;
+  width: 300px;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  
+}
+#todo_lists span{
+  text-align: center;
+  
+  margin: 0 auto;
+}
+
+ul img {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  
+}
+
+.todo__delete{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+footer{
+  margin: 0 auto;
+  text-align: center;
+}
